@@ -1,0 +1,113 @@
+body {
+    background-color: #e1f5fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Asegura que el contenido esté apilado en columna */
+}
+
+.ramo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Espacio entre las flores */
+}
+
+.girasol {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pétalos */
+.petalo {
+    position: absolute;
+    width: 40px;
+    height: 90px;
+    background-color: #ffb74d;
+    border-radius: 50%;
+    transform-origin: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Distribuir los pétalos alrededor del centro */
+.petalo:nth-child(1) {
+    transform: rotate(1deg) translateY(-1000px);
+}
+
+.petalo:nth-child(2) {
+    transform: rotate(45deg) translateY(-60px);
+}
+
+.petalo:nth-child(3) {
+    transform: rotate(90deg) translateY(-60px);
+}
+
+.petalo:nth-child(4) {
+    transform: rotate(135deg) translateY(-60px);
+}
+
+.petalo:nth-child(5) {
+    transform: rotate(180deg) translateY(-60px);
+}
+
+.petalo:nth-child(6) {
+    transform: rotate(225deg) translateY(-60px);
+}
+
+.petalo:nth-child(7) {
+    transform: rotate(270deg) translateY(-60px);
+}
+
+.petalo:nth-child(8) {
+    transform: rotate(315deg) translateY(-60px);
+}
+
+/* Centro de la flor */
+.centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #6d4c41;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto debajo de las flores */
+.texto-festivo {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff7043;
+    margin-top: 20px; /* Se asegura que el texto esté justo debajo de las flores */
+    animation: animacion-festiva 5s infinite alternate; /* Animación para el cambio de color */
+}
+
+/* Animación para el texto */
+@keyframes animacion-festiva {
+    0% {
+        color: #ff7043;
+    }
+    25% {
+        color: #ffca28;
+    }
+    50% {
+        color: #7b1fa2;
+    }
+    75% {
+        color: #1976d2;
+    }
+    100% {
+        color: #388e3c;
+    }
+}
